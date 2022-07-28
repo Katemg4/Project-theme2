@@ -1,0 +1,47 @@
+// Custom.scss
+// Option A: Include all of Bootstrap
+
+$primary:       #a83258;
+$secondary:     #333;
+
+// scss-docs-start grid-breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 800px,
+  lg: 1000px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+
+@import "../bootstrap/scss/bootstrap";
+
+// Then add additional custom code here
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Pacifico&family=Smooch+Sans:wght@400;700&display=swap');
+body {
+  font-family: 'DM Serif Display', serif;
+}
+
+p {
+  font-family: 'Arial', sans-serif;
+}
+
+.carousel-caption h5 {
+	font-size: 3rem;
+}
+
+.navbar-light .navbar-brand {
+	color: #9D9C62;
+}
+
+
+@include media screen and (min-width : 1000px) { 
+    .video{width:700px; height:500px;} 
+} 
+@include media screen and (max-width: 1000px) and (min-width : 750px) { 
+    .video{width:450px; height:300px; } 
+} 
+@include media screen and (max-width: 750px) { 
+    .video{width:260px; height:180px; } 
+}  
